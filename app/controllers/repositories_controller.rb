@@ -10,9 +10,8 @@ class RepositoriesController < ApplicationController
         req.params['client_id'] = Iv1.ef7b896962619bae
         req.params['client_secret'] = f9874efb89be0cbabff97f432c7b8f86752245d6
         req.params['v'] = '20160201'
-        req.params['near'] = params[:zipcode]
-        req.params['query'] = 'coffee shop'
-        req.options.timeout = 0
+        req.params['query'] = params[:query]
+       
       end
       body = JSON.parse(@resp.body)
       if @resp.success?
