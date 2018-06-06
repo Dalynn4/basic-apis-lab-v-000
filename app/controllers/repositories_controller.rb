@@ -13,7 +13,8 @@ class RepositoriesController < ApplicationController
       end
       body_hash = JSON.parse(@resp.body)
       @results = body_hash["items"].each do |item|
-        return item.name && item.html_url && item.
+        return item.name && item.html_url && item.description
+      end
       
       
  
