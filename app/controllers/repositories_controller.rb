@@ -11,7 +11,8 @@ class RepositoriesController < ApplicationController
         req.params['q'] = params[:query]
        
       end
-      @results = JSON.parse(@resp.body)
+      body_hash = JSON.parse(@resp.body)
+      @results = body_hash["items"]
       
       
  
