@@ -8,7 +8,7 @@
   <% if @results %>
   <%= @results.each do |item| %>
         Name: <%= item["name"] %> </br>
-         URL: <%= item["html_url"] %></br>
+         URL: <%= link_to item["html_url"], item["html_url"]%></br>
          Description: <%= item["description"] %></br>
          </br>
       <% end %>
