@@ -7,9 +7,9 @@
 <div>
   <% if @results %>
   <%= @results.each do |item| %>
-         <%= item["name"] %>
-         <%= item["html_url"] %>
-         <%= item["description"] %>
+        Name: <%= item["name"] %> </br>
+         URL: <%= item["html_url"] %></br>
+         Description<%= item["description"] %></br>
       <% end %>
  <% end %>
 </div>
