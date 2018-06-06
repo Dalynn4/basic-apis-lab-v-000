@@ -6,11 +6,11 @@
 <% end %>
 <div>
   <% if @results %>
-  <% @results.each do |item| %>
+  <%= @results.each do |item| %>
          <%= item["name"] %>
          <%= item.["html_url"] %>
          <%= item.["description"] %>
       <% end %>
- <% end %>
+
 </div>
 
